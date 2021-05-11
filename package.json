@@ -1,0 +1,45 @@
+{
+  "name": "neaf-badges",
+  "version": "1.0.0",
+  "description": "Neaf badges server",
+  "scripts": {
+    "start": "node src/app",
+    "dev": "nodemon --watch src src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "format": "prettier --write --loglevel warn .",
+    "fix": "npm run lint -- --fix && npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsnl/neaf-badges.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arsnl/neaf-badges/issues"
+  },
+  "homepage": "https://github.com/arsnl/neaf-badges#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-peppy": "^1.0.0-next.0",
+    "eslint-config-peppy-node": "^1.0.0-next.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-regexp": "^0.1.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unicorn": "^24.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "fastify": "^3.15.1",
+    "gradient-badge": "^1.3.1",
+    "ramda": "^0.27.1"
+  }
+}
