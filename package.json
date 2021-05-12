@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Neaf badges server",
   "scripts": {
-    "start": "node src/app",
-    "dev": "DEV=true nodemon --watch src src/app.js",
+    "dev": "DEV=true nodemon --watch api api/serverless.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --write --loglevel warn .",
