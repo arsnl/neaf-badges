@@ -1,8 +1,7 @@
 /* eslint-disable import/no-default-export */
 // Read the .env file.
-import * as dotenv from "dotenv";
-// Require the framework
-import Fastify from "fastify";
+const dotenv = require("dotenv");
+const Fastify = require("fastify");
 
 dotenv.config();
 
@@ -12,7 +11,7 @@ const app = Fastify({
 });
 
 // Register your application as a normal plugin.
-app.register(import("../src/app"));
+app.register(require("../src/app"));
 
 export default async (req, res) => {
   await app.ready();
