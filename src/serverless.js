@@ -1,7 +1,7 @@
 /* eslint-disable node/no-process-exit */
 /* eslint-disable node/no-process-env */
-const Fastify = require("fastify");
-const dotenv = require("dotenv");
+import dotenv from "dotenv";
+import Fastify from "fastify";
 
 dotenv.config();
 
@@ -23,7 +23,8 @@ if (process.env.DEV) {
   };
   start();
 }
-module.exports = async (req, res) => {
+// eslint-disable-next-line import/no-default-export
+export default async (req, res) => {
   await app.ready();
   app.server.emit("request", req, res);
 };

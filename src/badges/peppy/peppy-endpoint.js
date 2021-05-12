@@ -1,15 +1,14 @@
-const importJsx = require("import-jsx");
-const R = require("ramda");
-const ReactDOMServer = require("react-dom/server");
-
-const PeppyBadge = importJsx("./peppy-badge");
+import ReactDOMServer from "react-dom/server";
+import R from "ramda";
+import { PeppyBadge } from "./peppy-badge";
 
 const getStyleFromRequest = R.pipe(
   R.pathOr("classic", ["query", "style"]),
   (style) => (style === "classic" || style === "flat" ? style : "classic")
 );
 
-module.exports = async (fastify, options) => {
+// eslint-disable-next-line import/no-default-export
+export default async (fastify, options) => {
   const handler = (forcedStyle) => async (request, reply) => {
     const style = forcedStyle || getStyleFromRequest(request);
     const badge = ReactDOMServer.renderToStaticMarkup(PeppyBadge({ style }));

@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-filename-extension -- Vercel serverless don't support .jsx */
-const React = require("react");
-const PropTypes = require("prop-types");
+import React from "react";
+import PropTypes from "prop-types";
 
 const PeppyBadge = ({ style = "classic" }) => {
   const isClassic = style === "classic";
@@ -120,4 +119,4 @@ PeppyBadge.propTypes = {
   style: PropTypes.oneOf(["classic", "flat"]),
 };
 
-module.exports = PeppyBadge;
+export { PeppyBadge };

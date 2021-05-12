@@ -2,12 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "api/serverless.js"
+      "destination": "dist/serverless.js"
     }
-  ],
-  "functions": {
-    "api/serverless.js": {
-      "includeFiles": "api/**"
-    }
-  }
+  ]
 }
