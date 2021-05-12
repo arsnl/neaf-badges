@@ -2,7 +2,7 @@ const importJsx = require("import-jsx");
 const R = require("ramda");
 const ReactDOMServer = require("react-dom/server");
 
-const PeppyBadge = importJsx("./peppy-badge.jsx");
+const PeppyBadge = importJsx("./peppy-badge");
 
 const getStyleFromRequest = R.pipe(
   R.pathOr("classic", ["query", "style"]),

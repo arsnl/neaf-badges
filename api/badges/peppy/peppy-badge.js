@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension -- Vercel serverless don't support .jsx */
 const React = require("react");
 const PropTypes = require("prop-types");
 
