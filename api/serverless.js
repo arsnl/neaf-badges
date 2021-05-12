@@ -1,17 +1,13 @@
 /* eslint-disable node/no-process-exit */
 /* eslint-disable node/no-process-env */
-/* eslint-disable import/no-default-export */
-const dotenv = require("dotenv");
 const Fastify = require("fastify");
-
-dotenv.config();
 
 // Instantiate Fastify with some config
 const app = Fastify({
   logger: true,
 });
 
-app.register(require("./badges/peppy"));
+app.register(require("./badges/peppy/peppy-endpoint"));
 
 if (process.env.DEV) {
   const start = async () => {
