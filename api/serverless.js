@@ -1,6 +1,9 @@
 /* eslint-disable node/no-process-exit */
 /* eslint-disable node/no-process-env */
 const Fastify = require("fastify");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 // Instantiate Fastify with some config
 const app = Fastify({
