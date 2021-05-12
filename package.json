@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Neaf badges server",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "predev": "npm run build",
-    "dev": "npm run build -- -w & DEV=true nodemon --watch dist dist/serverless.js",
+    "predev": "babel src --out-dir api",
+    "dev": "babel src --out-dir api -w & DEV=true nodemon --watch api api/serverless.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --write --loglevel warn .",
