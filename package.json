@@ -4,7 +4,7 @@
   "description": "Neaf badges server",
   "scripts": {
     "start": "node src/app",
-    "dev": "nodemon --watch src src/app.js",
+    "dev": "DEV=true nodemon --watch src src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --write --loglevel warn .",
