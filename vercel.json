@@ -4,10 +4,5 @@
       "source": "/(.*)",
       "destination": "api/serverless.js"
     }
-  ],
-  "functions": {
-    "api/serverless.js": {
-      "includeFiles": "api/**"
-    }
-  }
+  ]
 }
